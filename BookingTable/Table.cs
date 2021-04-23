@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookingTable
 {
-    class Table
+    public class Table
     {
         public int Id { get; set; }
         public int BookedTime { get; set; }
