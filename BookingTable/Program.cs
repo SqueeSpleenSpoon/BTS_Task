@@ -6,7 +6,20 @@ namespace BookingTable
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Table table = new Table();
+
+            table.AddTable(new Table(1, 0, "In hole"));
+            table.AddTable(new Table(2, 0, "In corner"));
+            table.AddTable(new Table(3, 0, "In hole"));
+            table.AddTable(new Table(4, 0, "In hole"));
+            table.AddTable(new Table(5, 0, "In corner"));
+            table.AddTable(new Table(6, 0, "In hole"));
+
+            while (true)
+            {
+                Console.WriteLine();
+                table.Booking();
+            }
         }
     }
 }
