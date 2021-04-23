@@ -20,16 +20,18 @@ namespace BookingTable.Tests
             table2.BookedTime = 10;
             table.BookedTime = 10;
 
+            var bookedTime = 12;
+
             var findTable = table.TableList.Find(table => table.BookedTime != table2.BookedTime);
+            var findTable2 = table.TableList.Find(table => table.BookedTime != bookedTime);
 
+            Assert.Multiple(() =>
+            {
+                Assert.IsNull(findTable);
+                Assert.AreEqual(table2, findTable2);
+            });
 
-            //table.TableList.Find(table2, table.TableList);
-            //var findTable = TableList.Find(table => table.BookedTime != bookedTime);
-
-            //var inputTime = 13;
-
-
-            Assert.IsNull(findTable);
+            
         }
     }
 }
