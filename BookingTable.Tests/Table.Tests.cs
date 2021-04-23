@@ -16,7 +16,7 @@ namespace BookingTable.Tests
         {
             Table table = new Table();
             table.AddTable(table);
-            Assert.IsNotEmpty(table.TableList);
+            Assert.AreEqual(table.TableList[0], table);
         }
 
     }
