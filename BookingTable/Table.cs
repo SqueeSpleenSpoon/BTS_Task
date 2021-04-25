@@ -77,6 +77,5 @@ namespace BookingTable
                 Console.WriteLine($"You have successfully booked a table!  \nPlace: {findTable.Place}, Number: {findTable.Id}, Time: {findTable.BookedTime}");
             }     
         }
-
     }
 }
